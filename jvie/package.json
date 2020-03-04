@@ -1,0 +1,12 @@
+{
+	"name": "jvie",
+	"version": "0.3.0",
+	"dependencies": {
+		"express.io": "~1.1.13",
+		"ejs": "~2.3.4",
+		"body-parser": "~1.13.3"
+	},
+	"author": "Olivier <olivier@wodc.fr>",
+	"description": "Un jouet marrant avec les sockets"
+}
+

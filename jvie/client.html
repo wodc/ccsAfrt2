@@ -1,0 +1,22 @@
+<html>
+<head>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+function fsend(){
+io = io.connect()
+
+// Emit ready event.
+io.emit('ready')
+
+// Listen for the talk event.
+io.on('talk', function(data) {
+    alert(data.message)
+})
+
+io.close()
+}
+</script>
+</head>
+<body>
+<button onclick="fsend();">send</button>
+</body>

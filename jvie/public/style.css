@@ -1,0 +1,53 @@
+body {
+	font-family: "Courier New", "Lucida Console", sans-serif;
+	font-size: 1.1vw;
+}
+.cadre {
+	margin: auto;
+	width: 640px;
+	border: 1px solid black;
+}
+.case {
+	border: 1px solid gray;
+}
+.corps {
+	float: left;
+	width: 80%;
+}
+.margeDroite {
+	float:right;
+	min-width:122px;
+}
+.prive {
+	float: right;
+	width: 80%;
+}
+.pub {
+	float: left;
+	width: 19%;
+}
+#couleur{
+	margin:auto;
+	float:left;
+	max-width: 32px;
+	max-height: 32px;
+	border: 1px solid gray;
+}
+#pseudo{
+	font-family: Arial, Helvetica, sans-serif;
+	float:right;
+	width:60%;
+}
+#visiteur{ padding: 2px; margin: 1px;
+}
+#score{ clear:both; padding: 2px; margin: 1px;
+}
+ul {
+	list-style-type: none;
+}
+.score {
+	margin:auto;
+	width: 120px;
+	list-style-type: none;
+	text-align: center;
+}

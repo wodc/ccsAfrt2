@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+	<head>
+	<link rel="stylesheet" href="/public/style.css">
+	</head>
+	<body>
+		<div class="pub">
+		</div>
+		<div class="prive">
+		<div class="corps">
+		<table class="cadre">
+		<%
+		tailleCase =  Math.round( 640 / ( taille + 2 ) );
+		ind = 0;
+		for(var i = 1 ; i <= taille ; i++) {
+		%>
+		<tr>
+			<%
+			for(var j = 1 ; j <= taille ; j++) {
+			%>
+			<td class="case">
+				<img
+					id="nc_<%= ind %>"
+					title="<%= ind %>"
+					style="background-color:#<%= grille[ ind ].couleur %>"
+					src= "/public/cercleneutre.png"
+					width="<%= tailleCase %>px"
+					height="<%= tailleCase %>px"
+					onclick="fnSwitch(this, <%= ind %>);"
+				/>
+			</td>
+			<% ind++; } %>
+		</tr>
+		<% } %>
+		</table>
+		</div>
+		<div class="margeDroite">
+			<div id="visiteur">
+			<input	id="couleur"
+				type="image"
+				src="/public/cercleneutre.png"
+				width="<%= tailleCase %>px"
+				height="<%= tailleCase %>px"
+				class="color">
+			<div id="pseudo"
+				height="<%= tailleCase %>px"
+				>
+				Visiteur
+			</div>
+			</div>
+			<div id="score">
+			</div>
+		</div>
+		</div>
+  	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script language="Javascript" type="text/javascript" src="/public/scripts.js"></script>
+	<script type="text/javascript" src="/public/jscolor/jscolor.js"></script>
+	<script>var tmp = /([a-z_A-Z]+)([0-9]*)/.exec($('#pseudo').text());
+		if( isNaN(parseInt(tmp[2])) ){ fnConnect( tmp[1] ); }
+	</script>
+	
+	</body>
+</html>
